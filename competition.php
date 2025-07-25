@@ -5,14 +5,15 @@
     <title>MeMeVote - Competition</title>
     <link rel="stylesheet" href="./styles/competition.css">
 </head>
-<div class="switch-page-button" id="switchPageButton">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
-        <polyline points="9 22 9 12 15 12 15 22"></polyline>
-    </svg>
-    <span>Home</span>
-</div>
 <body>
+    <div class="switch-page-button" id="switchPageButton">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+            <polyline points="9 22 9 12 15 12 15 22"></polyline>
+        </svg>
+        <span>Home</span>
+    </div>
+    <?php include('./parts/loader.php');?>
     <?php include('./parts/header.php');?>
     <main class="main-content">
         <section class="original-image-section">

@@ -21,36 +21,36 @@ document.addEventListener('DOMContentLoaded', function() {
             label.style.color = '#999999';
         });
         
-        if (currentPage === '' || currentPage === 'index.html') {
+        if (currentPage === '' || currentPage === 'index.php') {
             const homeIcon = document.querySelector('.home-icon');
             if (homeIcon) {
                 homeIcon.classList.add('active');
                 if (homeIcon.nextElementSibling) homeIcon.nextElementSibling.style.color = '#ffffff';
             }
-        } else if (currentPage === 'upload.html') {
+        } else if (currentPage === 'upload.php') {
             const uploadIcon = document.querySelector('.upload-icon');
             if (uploadIcon) {
                 uploadIcon.classList.add('active');
                 if (uploadIcon.nextElementSibling) uploadIcon.nextElementSibling.style.color = '#ffffff';
             }
-        } else if (currentPage === 'wallet.html') {
+        } else if (currentPage === 'wallet.php') {
             const walletIcon = document.querySelector('.wallet-icon');
             if (walletIcon) {
                 walletIcon.classList.add('active');
                 if (walletIcon.nextElementSibling) walletIcon.nextElementSibling.style.color = '#ffffff';
             }
-        } else if (currentPage === 'about.html') {
+        } else if (currentPage === 'about.php') {
             const aboutIcon = document.querySelector('.about-icon');
             if (aboutIcon) {
                 aboutIcon.classList.add('active');
                 if (aboutIcon.nextElementSibling) aboutIcon.nextElementSibling.style.color = '#ffffff';
             }
-        } else if (currentPage === 'profile.html') {
+        } else if (currentPage === 'profile.php') {
             if (profileCircle) {
                 profileCircle.classList.add('active');
                 if (profileCircle.nextElementSibling) profileCircle.nextElementSibling.style.color = '#ffffff';
             }
-        } else if (currentPage === 'competition.html') {
+        } else if (currentPage === 'competition.php') {
             const homeIcon = document.querySelector('.home-icon');
             if (homeIcon) {
                 homeIcon.classList.add('active');

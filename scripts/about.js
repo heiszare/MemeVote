@@ -88,19 +88,19 @@ document.addEventListener('DOMContentLoaded', function() {
             label.style.color = '#999999';
         });
         
-        if (currentPage === '' || currentPage === 'index.html') {
+        if (currentPage === '' || currentPage === 'index.php') {
             document.querySelector('.home-icon').classList.add('active');
             document.querySelector('.home-icon').nextElementSibling.style.color = '#ffffff';
-        } else if (currentPage === 'upload.html') {
+        } else if (currentPage === 'upload.php') {
             document.querySelector('.upload-icon').classList.add('active');
             document.querySelector('.upload-icon').nextElementSibling.style.color = '#ffffff';
-        } else if (currentPage === 'wallet.html') {
+        } else if (currentPage === 'wallet.php') {
             document.querySelector('.wallet-icon').classList.add('active');
             document.querySelector('.wallet-icon').nextElementSibling.style.color = '#ffffff';
-        } else if (currentPage === 'about.html' || currentPage === 'About.html') {
+        } else if (currentPage === 'about.php' || currentPage === 'About.php') {
             document.querySelector('.about-icon').classList.add('active');
             document.querySelector('.about-icon').nextElementSibling.style.color = '#ffffff';
-        } else if (currentPage === 'profile.html') {
+        } else if (currentPage === 'profile.php') {
             profileCircle.classList.add('active');
             profileCircle.nextElementSibling.style.color = '#ffffff';
         }

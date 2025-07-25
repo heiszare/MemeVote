@@ -172,19 +172,19 @@ document.addEventListener('DOMContentLoaded', function() {
             label.style.color = '#999999';
         });
         
-        if (currentPage === '' || currentPage === 'index.html') {
+        if (currentPage === '' || currentPage === 'index.php') {
             document.querySelector('.footer-menu .home-icon').classList.add('active');
             document.querySelector('.footer-menu .home-icon').nextElementSibling.style.color = '#ffffff';
-        } else if (currentPage === 'upload.html') {
+        } else if (currentPage === 'upload.php') {
             document.querySelector('.footer-menu .upload-icon').classList.add('active');
             document.querySelector('.footer-menu .upload-icon').nextElementSibling.style.color = '#ffffff';
-        } else if (currentPage === 'wallet.html') {
+        } else if (currentPage === 'wallet.php') {
             document.querySelector('.footer-menu .wallet-icon').classList.add('active');
             document.querySelector('.footer-menu .wallet-icon').nextElementSibling.style.color = '#ffffff';
-        } else if (currentPage === 'about.html') {
+        } else if (currentPage === 'about.php') {
             document.querySelector('.footer-menu .about-icon').classList.add('active');
             document.querySelector('.footer-menu .about-icon').nextElementSibling.style.color = '#ffffff';
-        } else if (currentPage === 'profile.html') {
+        } else if (currentPage === 'profile.php') {
             profileCircle.classList.add('active');
             profileCircle.nextElementSibling.style.color = '#ffffff';
         }

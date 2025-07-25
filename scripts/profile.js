@@ -124,7 +124,7 @@ document.addEventListener('DOMContentLoaded', function() {
     authButtons.forEach(button => {
         button.addEventListener('click', function(e) {
             e.preventDefault();
-            const page = this.classList.contains('login-button') ? 'login.html' : 'signup.html';
+            const page = this.classList.contains('login-button') ? 'login.php' : 'signup.php';
             window.location.href = page;
         });
     });
@@ -140,15 +140,15 @@ document.addEventListener('DOMContentLoaded', function() {
         const profileCircle = document.querySelector('.profile-circle');
         profileCircle.classList.remove('active');
         
-        if (currentPage === '' || currentPage === 'index.html') {
+        if (currentPage === '' || currentPage === 'index.php') {
             document.querySelector('.home-icon').classList.add('active');
-        } else if (currentPage === 'upload.html') {
+        } else if (currentPage === 'upload.php') {
             document.querySelector('.upload-icon').classList.add('active');
-        } else if (currentPage === 'wallet.html') {
+        } else if (currentPage === 'wallet.php') {
             document.querySelector('.wallet-icon').classList.add('active');
-        } else if (currentPage === 'about.html' || currentPage === 'About us and rules.html') {
+        } else if (currentPage === 'about.php' || currentPage === 'About us and rules.php') {
             document.querySelector('.about-icon').classList.add('active');
-        } else if (currentPage === 'profile.html' || currentPage === 'Profile.html') {
+        } else if (currentPage === 'profile.php' || currentPage === 'Profile.php') {
             profileCircle.classList.add('active');
         }
         
@@ -174,7 +174,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if (confirm('Are you sure you want to log out?')) {
             showNotification('You have been logged out');
             setTimeout(() => {
-                window.location.href = 'index.html';
+                window.location.href = 'index.php';
             }, 2000);
         }
     }
