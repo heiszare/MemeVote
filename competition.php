@@ -1,3 +1,4 @@
+<?php require './functions.php';?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,7 +14,6 @@
         </svg>
         <span>Home</span>
     </div>
-    <?php include('./parts/loader.php');?>
     <?php include('./parts/header.php');?>
     <main class="main-content">
         <section class="original-image-section">
@@ -27,25 +27,19 @@
             <h2 class="section-title">Which meme do you vote for?</h2>
             
             <div class="memes-container">
+                <?php $memes=['user1'=>['meme3'],'user2'=>['meme4']];
+                $c=0;
+                foreach($memes as $meme=>$items):?>
                 <div class="meme-card">
                     <div class="meme-image-container">
-                        <img src="Image/meme3.webp" alt="Meme 1" class="meme-image">
+                        <img src="./memes/<?= $items[0];?>.webp" alt="<?= $items[0];?> image" class="meme-image">
                     </div>
-                    <div class="meme-text">Meme by User1</div>
+                    <div class="meme-text">Meme by <?= $meme;?></div>
                     <div class="meme-info">
-                        <button class="vote-button" data-meme-id="1">Vote</button>
+                        <button class="vote-button" data-meme-id="<?= $c;?>">Vote</button>
                     </div>
                 </div>
-
-                <div class="meme-card">
-                    <div class="meme-image-container">
-                        <img src="Image/meme4.webp" alt="Meme 2" class="meme-image">
-                    </div>
-                    <div class="meme-text">Meme by User2</div>
-                    <div class="meme-info">
-                        <button class="vote-button" data-meme-id="2">Vote</button>
-                    </div>
-                </div>
+                <?php endforeach;?>
             </div>
         </section>
     </main>

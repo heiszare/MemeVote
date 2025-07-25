@@ -1,0 +1,33 @@
+{
+    "index":[
+        {
+        "name_fa":"خانه",
+        "icon_name":"home.svg"
+        }
+    ],
+    "upload":[
+        {
+        "name_fa":"آپلود",
+        "icon_name":"upload.svg"
+        }
+    ],
+    "wallet":[
+        {
+        "name_fa":"کیف پول",
+        "icon_name":"wallet.svg"
+        }
+    ],
+    "about":[
+        {
+        "name_fa":"درباره",
+        "icon_name":"about.svg"
+        }
+    ],
+    "profile":[
+        {
+        "name_fa":"پروفایل",
+        "icon_name":"profile.png"
+        }
+    ]
+    
+}
