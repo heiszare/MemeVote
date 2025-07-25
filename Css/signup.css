@@ -1,0 +1,463 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #ffffff;
+    color: #000000;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.splash-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    transition: opacity 0.5s ease;
+}
+
+.logo-container {
+    text-align: center;
+    transition: transform 1s ease;
+}
+
+.logo {
+    width: 200px;
+    height: 200px;
+}
+
+.header {
+    background-color: #ffffff;
+    border-left: 2px solid #000;
+    border-right: 2px solid #000;
+    border-bottom: 2px solid #000;
+    border-radius: 0 0 15px 15px;
+    padding: 10px 0;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 1200px;
+    z-index: 100;
+    display: none;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.site-name {
+    text-align: center;
+}
+
+.site-name h1 {
+    font-size: 24px;
+    color: #000000;
+}
+
+.main-content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 20px 20px;
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+.signup-container {
+    border-radius: 8px;
+    padding: 30px;
+    width: 100%;
+    max-width: 500px;
+}
+
+.form-logo-container {
+    text-align: center;
+    margin-bottom: 25px;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.form-logo {
+    width: 120px;
+    height: 120px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #333333;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px 0;
+    border: none;
+    border-bottom: 2px solid #000;
+    background-color: transparent;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-bottom-color: #666;
+}
+
+.error-message {
+    color: #ff0000;
+    font-size: 12px;
+    margin-top: 5px;
+    display: block;
+    height: 15px;
+}
+
+.form-group input.error {
+    border-bottom-color: #ff0000;
+}
+
+.form-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.terms-agreement {
+    display: flex;
+    align-items: center;
+}
+
+.terms-agreement input {
+    margin-right: 8px;
+}
+
+.terms-agreement a {
+    color: #000;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.signup-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: transparent;
+    color: #000000;
+    border: 2px solid #000000;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin-bottom: 15px;
+}
+
+.signup-btn:hover {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+.google-signup-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #ffffff;
+    color: #333333;
+    border: 2px solid #000000;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-weight: 500;
+}
+
+.google-signup-btn:hover {
+    background-color: #f8f9fa;
+    border-color: #dadce0;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.google-icon {
+    width: 20px;
+    height: 20px;
+}
+
+.login-link {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.login-link a {
+    color: #000000;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.login-link a:hover {
+    text-decoration: underline;
+}
+
+.footer {
+    background-color: #f5f5f5;
+    padding: 15px 0;
+    text-align: center;
+    font-size: 14px;
+    color: #666666;
+    margin-top: auto;
+    display: none;
+}
+
+.terms-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.terms-content {
+    background-color: #fff;
+    width: 90%;
+    max-width: 500px;
+    max-height: 80vh;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.terms-title {
+    padding: 15px;
+    margin: 0;
+    font-size: 1.4rem;
+    font-weight: 600;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+}
+
+.terms-text {
+    padding: 15px;
+    overflow-y: auto;
+    max-height: 50vh;
+}
+
+.terms-text h4 {
+    margin: 15px 0 10px;
+    color: #333;
+}
+
+.terms-text p {
+    margin: 0 0 15px;
+    line-height: 1.5;
+    color: #555;
+}
+
+.terms-actions {
+    padding: 15px;
+    border-top: 1px solid #eee;
+}
+
+.terms-checkbox-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.terms-checkbox-container input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+}
+
+.terms-checkbox-container label {
+    font-size: 0.9rem;
+    color: #333;
+    cursor: pointer;
+}
+
+.terms-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.agree-button {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 25px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.agree-button:hover:not(:disabled) {
+    background-color: #333;
+}
+
+.agree-button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.cancel-button {
+    background-color: transparent;
+    color: #555;
+    border: 1px solid #ccc;
+    padding: 10px 25px;
+    border-radius: 25px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.cancel-button:hover {
+    background-color: #f5f5f5;
+}
+
+.notification {
+    position: fixed;
+    bottom: 100px;
+    left: 50%;
+    transform: translateX(-50%) translateY(100px);
+    background-color: #333;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 25px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    z-index: 1100;
+    opacity: 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.notification.show {
+    transform: translateX(-50%) translateY(0);
+    opacity: 1;
+}
+
+.notification.success {
+    background-color: #4CAF50;
+}
+
+.notification.error {
+    background-color: #F44336;
+}
+
+@media (max-width: 768px) {
+    .signup-container {
+        padding: 20px;
+    }
+    
+    .form-options {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .form-logo {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .header {
+        width: 95%;
+    }
+    
+    .terms-title {
+        font-size: 1.3rem;
+        padding: 12px;
+    }
+    
+    .terms-text {
+        padding: 12px;
+    }
+    
+    .terms-actions {
+        padding: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .signup-container {
+        padding: 15px;
+    }
+    
+    .site-name h1 {
+        font-size: 20px;
+    }
+    
+    .form-group input,
+    .signup-btn,
+    .google-signup-btn {
+        padding: 10px 0;
+    }
+    
+    .google-signup-btn {
+        padding: 10px;
+    }
+    
+    .form-logo {
+        width: 80px;
+        height: 80px;
+    }
+    
+    .header {
+        width: 100%;
+        border-radius: 0 0 10px 10px;
+    }
+    
+    .terms-title {
+        font-size: 1.2rem;
+        padding: 10px;
+    }
+    
+    .terms-text {
+        padding: 10px;
+    }
+    
+    .terms-actions {
+        padding: 10px;
+    }
+    
+    .terms-buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .agree-button, .cancel-button {
+        width: 100%;
+    }
+}

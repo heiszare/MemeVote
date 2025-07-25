@@ -1,0 +1,338 @@
+@import url('../Template/Css/template.css');
+
+.main-content {
+    padding-top: 60px;
+    margin-top: 40px;
+}
+
+.wallet-section {
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.coin-name {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 20px;
+}
+
+.coin-balance-container {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto 25px;
+    display: flex;
+    justify-content: center;
+}
+
+.coin-balance {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: #f9f9f9;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.balance-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.balance-amount {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #000;
+    line-height: 1;
+}
+
+.coin-logo {
+    width: 32px;
+    height: 32px;
+    fill: #000;
+    margin-bottom: 2px;
+    margin-left: 2px;
+}
+
+.balance-label {
+    font-size: 1rem;
+    color: #555;
+    margin-top: 8px;
+}
+
+.wallet-actions {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.action-row {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.wallet-button {
+    flex: 1;
+    max-width: 280px;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+}
+
+.get-button {
+    background-color: #000;
+    color: #fff;
+}
+
+.get-button:hover {
+    background-color: #333;
+}
+
+.transfer-button {
+    background-color: #000;
+    color: #fff;
+}
+
+.transfer-button:hover {
+    background-color: #333;
+}
+
+.withdraw-button {
+    background-color: #000;
+    color: #fff;
+    max-width: 580px;
+}
+
+.withdraw-button:hover {
+    background-color: #333;
+}
+
+.button-icon {
+    width: 20px;
+    height: 20px;
+}
+
+.divider {
+    height: 2px;
+    background-color: #eee;
+    width: 90%;
+    max-width: 600px;
+    margin: 0 auto 25px;
+    border-radius: 2px;
+}
+
+.section-title {
+    text-align: center;
+    margin: 15px 0;
+    font-size: 1.5rem;
+    color: #333;
+    font-weight: 600;
+}
+
+.transaction-section, .tasks-section {
+    margin-bottom: 30px;
+}
+
+.transaction-list, .task-list {
+    width: 90%;
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #f9f9f9;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.transaction-item, .task-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.transaction-item:last-child, .task-item:last-child {
+    border-bottom: none;
+}
+
+.transaction-info, .task-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.transaction-type, .task-name {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #333;
+}
+
+.transaction-date {
+    font-size: 0.8rem;
+    color: #777;
+    margin-top: 3px;
+}
+
+.transaction-amount {
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.positive {
+    color: #000;
+}
+
+.negative {
+    color: #000;
+}
+
+.task-reward {
+    font-size: 0.9rem;
+    color: #000;
+    margin-top: 3px;
+    font-weight: 500;
+}
+
+.task-button {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.task-button:hover {
+    background-color: #333;
+    transform: scale(1.05);
+}
+
+.task-button:active {
+    transform: scale(0.95);
+}
+
+.deposit, .withdrawal, .reward {
+    color: #000;
+}
+
+.footer-menu a {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media (max-width: 768px) {
+    .coin-name {
+        font-size: 1.8rem;
+    }
+    
+    .balance-amount {
+        font-size: 2.2rem;
+    }
+    
+    .coin-logo {
+        width: 28px;
+        height: 28px;
+    }
+    
+    .balance-label {
+        font-size: 0.9rem;
+    }
+    
+    .wallet-button {
+        padding: 10px 15px;
+        font-size: 0.9rem;
+    }
+    
+    .section-title {
+        font-size: 1.3rem;
+    }
+    
+    .transaction-type, .task-name {
+        font-size: 0.9rem;
+    }
+    
+    .transaction-amount {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .coin-name {
+        font-size: 1.6rem;
+    }
+    
+    .balance-amount {
+        font-size: 2rem;
+    }
+    
+    .coin-logo {
+        width: 24px;
+        height: 24px;
+    }
+    
+    .balance-label {
+        font-size: 0.85rem;
+    }
+    
+    .action-row {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .wallet-button {
+        width: 100%;
+        max-width: 100%;
+    }
+    
+    .section-title {
+        font-size: 1.2rem;
+    }
+    
+    .transaction-item, .task-item {
+        padding: 12px 15px;
+    }
+    
+    .transaction-type, .task-name {
+        font-size: 0.85rem;
+    }
+    
+    .transaction-date {
+        font-size: 0.75rem;
+    }
+    
+    .transaction-amount {
+        font-size: 0.9rem;
+    }
+    
+    .task-reward {
+        font-size: 0.8rem;
+    }
+    
+    .task-button {
+        padding: 6px 15px;
+        font-size: 0.8rem;
+    }
+}

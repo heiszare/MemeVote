@@ -1,0 +1,1245 @@
+@import url('../Template/Css/template.css');
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.auth-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.auth-button {
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.login-button {
+    background-color: transparent;
+    color: #000;
+    border: 1px solid #000;
+}
+
+.login-button:hover {
+    background-color: #f0f0f0;
+}
+
+.signup-button {
+    background-color: #000;
+    color: #fff;
+    border: 1px solid #000;
+}
+
+.signup-button:hover {
+    background-color: #333;
+}
+
+.profile-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0 10px;
+    margin-bottom: 15px;
+}
+
+.profile-image-container {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    margin-bottom: 15px;
+}
+
+.profile-image-large {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #000;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.edit-profile-image {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: #000;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.edit-profile-image:hover {
+    transform: scale(1.1);
+}
+
+.edit-icon {
+    width: 20px;
+    height: 20px;
+    stroke: #fff;
+}
+
+.profile-name {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #000;
+    text-align: center;
+}
+
+.profile-username {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.profile-tabs {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.tabs-container {
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 0 10px;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    max-width: 100%;
+    justify-content: center;
+    -webkit-overflow-scrolling: touch;
+}
+
+.tabs-container::-webkit-scrollbar {
+    display: none;
+}
+
+.tab-button {
+    background: none;
+    border: none;
+    padding: 10px 15px;
+    margin: 0 5px;
+    font-size: 14px;
+    color: #666;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.tab-button:first-child {
+    margin-left: 0;
+}
+
+.tab-button:last-child {
+    margin-right: 0;
+}
+
+.tab-button::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #000;
+    transition: width 0.3s ease;
+}
+
+.tab-button.active {
+    color: #000;
+    font-weight: 600;
+}
+
+.tab-button.active::after {
+    width: 100%;
+}
+
+.profile-content {
+    padding: 0 15px;
+    margin-top: 10px;
+}
+
+.tab-content {
+    display: none;
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.section-title {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #000;
+    text-align: center;
+}
+
+.profile-form, .password-form {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: #666;
+    font-weight: 500;
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.form-group input:focus, .form-group textarea:focus {
+    border-color: #000;
+    outline: none;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.save-button {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: block;
+    margin: 0 auto;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.save-button:hover {
+    background-color: #333;
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.save-button:active {
+    transform: scale(0.95);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.password-section {
+    margin-top: 35px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+}
+
+.settings-container {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.setting-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.setting-item:last-child {
+    border-bottom: none;
+}
+
+.setting-label {
+    font-size: 16px;
+    color: #333;
+    font-weight: 500;
+}
+
+.language-select {
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+    background-color: #fff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 24px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+input:checked + .slider {
+    background-color: #000;
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px #000;
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+.notification-settings {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.notification-group {
+    margin-bottom: 25px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.notification-group-title {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.notification-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.notification-item:last-child {
+    border-bottom: none;
+}
+
+.notification-label {
+    font-size: 14px;
+    color: #666;
+}
+
+.awards-container {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.ranking-info {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.ranking-title {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.ranking-badge {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px 25px;
+    background-color: #f9f9f9;
+    border-radius: 15px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.rank-number {
+    font-size: 36px;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 5px;
+}
+
+.rank-label {
+    font-size: 14px;
+    color: #666;
+}
+
+.awards-title {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.award-item {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    margin-bottom: 15px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+}
+
+.award-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.award-icon {
+    font-size: 30px;
+    margin-right: 15px;
+}
+
+.award-details {
+    flex: 1;
+}
+
+.award-name {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.award-description {
+    font-size: 14px;
+    color: #666;
+}
+
+.notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 12px 20px;
+    background-color: #000;
+    color: #fff;
+    border-radius: 8px;
+    z-index: 1000;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.notification.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.notification.error {
+    background-color: #ff3b30;
+}
+
+.notification.success {
+    background-color: #34c759;
+}
+
+.footer-menu a {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logout-container {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.logout-button {
+    background-color: #ff3b30;
+    color: #fff;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.logout-button:hover {
+    background-color: #e0352b;
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.logout-button:active {
+    transform: scale(0.95);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+body.dark-mode {
+    background-color: #121212;
+    color: #f5f5f5;
+}
+
+body.dark-mode .header {
+    background-color: #1e1e1e;
+    border-color: #333;
+}
+
+body.dark-mode .site-name h1 {
+    color: #f5f5f5;
+}
+
+body.dark-mode .profile-name {
+    color: #f5f5f5;
+}
+
+body.dark-mode .section-title {
+    color: #f5f5f5;
+}
+
+body.dark-mode .form-group input, 
+body.dark-mode .form-group textarea,
+body.dark-mode .language-select {
+    background-color: #2c2c2c;
+    border-color: #444;
+    color: #f5f5f5;
+}
+
+body.dark-mode .setting-label, 
+body.dark-mode .notification-label,
+body.dark-mode .form-group label {
+    color: #bbb;
+}
+
+body.dark-mode .award-item,
+body.dark-mode .ranking-badge,
+body.dark-mode .notification-group {
+    background-color: #2c2c2c;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+body.dark-mode .award-name {
+    color: #f5f5f5;
+}
+
+body.dark-mode .award-description,
+body.dark-mode .rank-label {
+    color: #bbb;
+}
+
+body.dark-mode .password-section {
+    border-color: #333;
+}
+
+body.dark-mode .setting-item,
+body.dark-mode .notification-item {
+    border-color: #333;
+}
+
+body.dark-mode .login-button {
+    color: #f5f5f5;
+    border-color: #f5f5f5;
+}
+
+body.dark-mode .login-button:hover {
+    background-color: #333;
+}
+
+/* Responsive Styles - Optimized for Mobile */
+@media (max-width: 768px) {
+    .main-content {
+        padding-top: 70px;
+        padding-bottom: 90px;
+    }
+    
+    .profile-header {
+        padding: 15px 0;
+    }
+    
+    .profile-image-container {
+        width: 110px;
+        height: 110px;
+    }
+    
+    .profile-name {
+        font-size: 22px;
+    }
+    
+    .profile-username {
+        font-size: 15px;
+    }
+    
+    .tabs-container {
+        justify-content: center;
+    }
+    
+    .tab-button {
+        padding: 10px 14px;
+        font-size: 14px;
+    }
+    
+    .form-group input, .form-group textarea {
+        padding: 12px;
+        font-size: 15px;
+    }
+    
+    .save-button {
+        padding: 12px 24px;
+    }
+    
+    .auth-buttons {
+        gap: 5px;
+    }
+    
+    .auth-button {
+        padding: 5px 10px;
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .main-content {
+        padding-top: 65px;
+        padding-bottom: 85px;
+    }
+    
+    .profile-header {
+        padding: 12px 0;
+    }
+    
+    .profile-image-container {
+        width: 90px;
+        height: 90px;
+        margin-bottom: 12px;
+    }
+    
+    .edit-profile-image {
+        width: 30px;
+        height: 30px;
+        right: 2px;
+        bottom: 2px;
+    }
+    
+    .edit-icon {
+        width: 16px;
+        height: 16px;
+    }
+    
+    .profile-name {
+        font-size: 20px;
+        margin-bottom: 4px;
+    }
+    
+    .profile-username {
+        font-size: 13px;
+        margin-bottom: 8px;
+    }
+    
+    .profile-tabs {
+        margin-bottom: 15px;
+    }
+    
+    .tabs-container {
+        overflow-x: auto;
+        justify-content: flex-start;
+        padding: 0 5px;
+    }
+    
+    .tab-button {
+        padding: 8px 12px;
+        font-size: 13px;
+        margin: 0 3px;
+    }
+    
+    .section-title {
+        font-size: 17px;
+        margin-bottom: 15px;
+    }
+    
+    .form-group {
+        margin-bottom: 16px;
+    }
+    
+    .form-group label {
+        font-size: 13px;
+        margin-bottom: 6px;
+    }
+    
+    .form-group input, .form-group textarea {
+        padding: 10px;
+        font-size: 14px;
+        border-radius: 8px;
+    }
+    
+    .save-button {
+        padding: 10px 22px;
+        font-size: 14px;
+    }
+    
+    .setting-item {
+        padding: 12px 0;
+    }
+    
+    .setting-label {
+        font-size: 14px;
+    }
+    
+    .notification-group {
+        padding: 12px;
+        margin-bottom: 18px;
+    }
+    
+    .notification-group-title {
+        font-size: 15px;
+        margin-bottom: 12px;
+    }
+    
+    .notification-item {
+        padding: 10px 0;
+    }
+    
+    .notification-label {
+        font-size: 13px;
+    }
+    
+    .ranking-badge {
+        padding: 15px 25px;
+    }
+    
+    .rank-number {
+        font-size: 32px;
+    }
+    
+    .rank-label {
+        font-size: 13px;
+    }
+    
+    .award-item {
+        padding: 14px;
+        margin-bottom: 14px;
+    }
+    
+    .award-icon {
+        font-size: 26px;
+        margin-right: 14px;
+    }
+    
+    .award-name {
+        font-size: 15px;
+    }
+    
+    .award-description {
+        font-size: 13px;
+    }
+    
+    .auth-button {
+        padding: 4px 8px;
+        font-size: 0.75rem;
+    }
+    
+    .header {
+        padding: 0 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-content {
+        padding: 60px 12px 80px;
+    }
+    
+    .profile-header {
+        padding: 10px 0;
+    }
+    
+    .profile-image-container {
+        width: 85px;
+        height: 85px;
+        margin-bottom: 10px;
+    }
+    
+    .edit-profile-image {
+        width: 28px;
+        height: 28px;
+    }
+    
+    .profile-name {
+        font-size: 18px;
+        margin-bottom: 3px;
+    }
+    
+    .profile-username {
+        font-size: 12px;
+        margin-bottom: 6px;
+    }
+    
+    .tabs-container {
+        padding-bottom: 2px;
+    }
+    
+    .tab-button {
+        padding: 8px 10px;
+        font-size: 12px;
+        margin: 0 2px;
+    }
+    
+    .tab-button::after {
+        height: 2px;
+    }
+    
+    .section-title {
+        font-size: 16px;
+        margin-bottom: 14px;
+    }
+    
+    .form-group {
+        margin-bottom: 14px;
+    }
+    
+    .form-group label {
+        font-size: 12px;
+        margin-bottom: 5px;
+    }
+    
+    .form-group input, .form-group textarea {
+        padding: 10px;
+        font-size: 13px;
+    }
+    
+    .save-button {
+        padding: 10px 20px;
+        font-size: 13px;
+    }
+    
+    .password-section {
+        margin-top: 25px;
+        padding-top: 15px;
+    }
+    
+    .setting-item {
+        padding: 10px 0;
+    }
+    
+    .setting-label {
+        font-size: 13px;
+    }
+    
+    .notification-group {
+        padding: 10px;
+        margin-bottom: 15px;
+    }
+    
+    .notification-group-title {
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
+    
+    .notification-item {
+        padding: 8px 0;
+    }
+    
+    .notification-label {
+        font-size: 12px;
+    }
+    
+    .ranking-badge {
+        padding: 12px 20px;
+    }
+    
+    .rank-number {
+        font-size: 28px;
+    }
+    
+    .rank-label {
+        font-size: 12px;
+    }
+    
+    .award-item {
+        padding: 12px;
+        margin-bottom: 12px;
+    }
+    
+    .award-icon {
+        font-size: 22px;
+        margin-right: 12px;
+    }
+    
+    .award-name {
+        font-size: 14px;
+    }
+    
+    .award-description {
+        font-size: 12px;
+    }
+    
+    .logout-button {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+    
+    .auth-button {
+        padding: 3px 6px;
+        font-size: 0.7rem;
+    }
+}
+
+@media (max-width: 380px) {
+    .main-content {
+        padding: 55px 10px 75px;
+    }
+    
+    .profile-image-container {
+        width: 80px;
+        height: 80px;
+    }
+    
+    .edit-profile-image {
+        width: 26px;
+        height: 26px;
+    }
+    
+    .edit-icon {
+        width: 14px;
+        height: 14px;
+    }
+    
+    .profile-name {
+        font-size: 17px;
+    }
+    
+    .profile-username {
+        font-size: 11px;
+    }
+    
+    .tabs-container {
+        justify-content: flex-start;
+    }
+    
+    .tab-button {
+        padding: 7px 9px;
+        font-size: 11px;
+        margin: 0 2px;
+    }
+    
+    .section-title {
+        font-size: 15px;
+    }
+    
+    .form-group label {
+        font-size: 11px;
+    }
+    
+    .form-group input, .form-group textarea {
+        padding: 9px;
+        font-size: 12px;
+    }
+    
+    .save-button {
+        padding: 9px 18px;
+        font-size: 12px;
+    }
+    
+    .setting-label, .notification-label {
+        font-size: 12px;
+    }
+    
+    .switch {
+        width: 42px;
+        height: 21px;
+    }
+    
+    .slider:before {
+        height: 13px;
+        width: 13px;
+    }
+    
+    input:checked + .slider:before {
+        transform: translateX(21px);
+    }
+    
+    .rank-number {
+        font-size: 24px;
+    }
+    
+    .award-icon {
+        font-size: 20px;
+    }
+    
+    .award-name {
+        font-size: 13px;
+    }
+    
+    .award-description {
+        font-size: 11px;
+    }
+    
+    .logout-button {
+        padding: 9px 18px;
+        font-size: 13px;
+    }
+    
+    .site-name h1 {
+        font-size: 18px;
+    }
+    
+    .auth-buttons {
+        gap: 3px;
+    }
+}
+
+/* Fix for very small screens */
+@media (max-width: 320px) {
+    .main-content {
+        padding: 50px 8px 70px;
+    }
+    
+    .profile-header {
+        padding: 8px 0;
+    }
+    
+    .profile-image-container {
+        width: 75px;
+        height: 75px;
+    }
+    
+    .edit-profile-image {
+        width: 24px;
+        height: 24px;
+    }
+    
+    .edit-icon {
+        width: 13px;
+        height: 13px;
+    }
+    
+    .profile-name {
+        font-size: 16px;
+    }
+    
+    .profile-username {
+        font-size: 10px;
+    }
+    
+    .tab-button {
+        padding: 6px 8px;
+        font-size: 10px;
+        margin: 0 1px;
+    }
+    
+    .section-title {
+        font-size: 14px;
+        margin-bottom: 12px;
+    }
+    
+    .form-group {
+        margin-bottom: 12px;
+    }
+    
+    .form-group label {
+        font-size: 10px;
+        margin-bottom: 4px;
+    }
+    
+    .form-group input, .form-group textarea {
+        padding: 8px;
+        font-size: 11px;
+        border-radius: 6px;
+    }
+    
+    .save-button {
+        padding: 8px 16px;
+        font-size: 11px;
+        border-radius: 20px;
+    }
+    
+    .setting-label, .notification-label {
+        font-size: 11px;
+    }
+    
+    .switch {
+        width: 38px;
+        height: 19px;
+    }
+    
+    .slider:before {
+        height: 11px;
+        width: 11px;
+        left: 4px;
+        bottom: 4px;
+    }
+    
+    input:checked + .slider:before {
+        transform: translateX(19px);
+    }
+    
+    .notification-group {
+        padding: 8px;
+        margin-bottom: 12px;
+    }
+    
+    .notification-group-title {
+        font-size: 13px;
+        margin-bottom: 8px;
+    }
+    
+    .notification-item {
+        padding: 6px 0;
+    }
+    
+    .ranking-badge {
+        padding: 10px 15px;
+    }
+    
+    .rank-number {
+        font-size: 22px;
+    }
+    
+    .rank-label {
+        font-size: 10px;
+    }
+    
+    .award-item {
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+    
+    .award-icon {
+        font-size: 18px;
+        margin-right: 10px;
+    }
+    
+    .award-name {
+        font-size: 12px;
+        margin-bottom: 3px;
+    }
+    
+    .award-description {
+        font-size: 10px;
+    }
+    
+    .logout-button {
+        padding: 8px 16px;
+        font-size: 12px;
+    }
+    
+    .site-name h1 {
+        font-size: 16px;
+    }
+    
+    .auth-button {
+        padding: 2px 5px;
+        font-size: 0.65rem;
+        border-radius: 15px;
+    }
+}
+
+/* Fix for iPhone 5/SE and other very small devices */
+@media (max-width: 320px) and (max-height: 568px) {
+    .profile-tabs {
+        margin-bottom: 10px;
+    }
+
+    .form-group {
+        margin-bottom: 10px;
+    }
+
+    .form-group label {
+        margin-bottom: 3px;
+    }
+
+    .form-group input, .form-group textarea {
+        padding: 7px;
+    }
+
+    .save-button {
+        padding: 7px 14px;
+        font-size: 10px;
+    }
+
+    .password-section {
+        margin-top: 20px;
+        padding-top: 10px;
+    }
+
+    .setting-item {
+        padding: 8px 0;
+    }
+
+    .notification-group {
+        padding: 7px;
+        margin-bottom: 10px;
+    }
+
+    .notification-item {
+        padding: 5px 0;
+    }
+
+    .award-item {
+        padding: 8px;
+        margin-bottom: 8px;
+    }
+    
+    .logout-button {
+        padding: 7px 14px;
+        font-size: 10px;
+    }
+}

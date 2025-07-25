@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MeMeVote - About Us & Rules</title>
+    <link rel="stylesheet" href="Css/about.css">
+    <link rel="icon" type="image/x-icon" href="Image/logo.webp">
+</head>
+<body>
+    <header class="header">
+        <div class="site-name">
+            <h1>MeMeVote</h1>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section class="tab-section">
+            <div class="tab-buttons">
+                <button class="tab-button active" data-tab="about">About Us</button>
+                <button class="tab-button" data-tab="rules">Rules</button>
+            </div>
+            
+            <div class="tab-content">
+                <div class="tab-pane active" id="about-content">
+                    <h2 class="section-title">About MeMeVote</h2>
+                    <div class="content-container">
+                        <div class="about-image-container">
+                            <img src="Image/meme5.webp" alt="About MeMeVote" class="about-image">
+                        </div>
+                        <div class="about-text">
+                            <p>MeMeVote is a fun and engaging platform for meme enthusiasts to showcase their creativity and humor.</p>
+                            <p>Our mission is to bring together a community of meme creators and fans to share laughter and creativity through weekly challenges.</p>
+                            <p>Founded in 2023, MeMeVote has quickly grown into a vibrant community where users can participate in meme challenges, vote for their favorites, and win exciting prizes.</p>
+                            <h3>How It Works</h3>
+                            <p>Each week, we post a new challenge image. Users can download this image, create their funniest meme, and upload it to participate in the challenge.</p>
+                            <p>The community votes for their favorite memes, and the winners receive rewards and recognition for their creativity.</p>
+                            <h3>Join Our Community</h3>
+                            <p>Whether you're a meme creator or just enjoy good humor, MeMeVote offers a fun and interactive experience for everyone.</p>
+                            <p>Sign up today to start participating in challenges, voting for your favorite memes, and becoming part of our growing community!</p>
+                        </div>
+                        
+                        <div class="feedback-section">
+                            <h3 class="feedback-title">Rate Our Website</h3>
+                            <p class="feedback-description">We value your feedback! Please rate our website and share your thoughts with us.</p>
+                            
+                            <form id="feedbackForm" class="feedback-form">
+                                <div class="form-group">
+                                    <label for="name">Name</label>
+                                    <input type="text" id="name" name="name" placeholder="Your name" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="email">Email</label>
+                                    <input type="email" id="email" name="email" placeholder="Your email" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="username">Username</label>
+                                    <input type="text" id="username" name="username" placeholder="Your username" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label>Rating</label>
+                                    <div class="star-rating">
+                                        <input type="radio" id="star5" name="rating" value="5" />
+                                        <label for="star5" title="5 stars"></label>
+                                        <input type="radio" id="star4" name="rating" value="4" />
+                                        <label for="star4" title="4 stars"></label>
+                                        <input type="radio" id="star3" name="rating" value="3" />
+                                        <label for="star3" title="3 stars"></label>
+                                        <input type="radio" id="star2" name="rating" value="2" />
+                                        <label for="star2" title="2 stars"></label>
+                                        <input type="radio" id="star1" name="rating" value="1" />
+                                        <label for="star1" title="1 star"></label>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="message">Message</label>
+                                    <textarea id="message" name="message" placeholder="Your feedback" rows="4" required></textarea>
+                                </div>
+                                
+                                <button type="submit" class="submit-button">Submit Feedback</button>
+                            </form>
+                            
+                            <div id="feedbackSuccess" class="feedback-success">
+                                <p>Thank you for your feedback! We appreciate your input.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="tab-pane" id="rules-content">
+                    <h2 class="section-title">MeMeVote Rules</h2>
+                    <div class="content-container">
+                        <div class="rules-list">
+                            <div class="rule-item">
+                                <h3>1. Participation Guidelines</h3>
+                                <p>- All participants must register an account to submit memes.</p>
+                                <p>- Each user may submit up to 3 memes per challenge.</p>
+                                <p>- Submissions must use the provided challenge image.</p>
+                                <p>- Submissions must be made before the challenge deadline.</p>
+                            </div>
+                            
+                            <div class="rule-item">
+                                <h3>2. Content Rules</h3>
+                                <p>- No offensive, discriminatory, or hateful content.</p>
+                                <p>- No explicit or adult content.</p>
+                                <p>- No copyright infringement.</p>
+                                <p>- No personal attacks or bullying.</p>
+                                <p>- MeMeVote reserves the right to remove any content that violates these rules.</p>
+                            </div>
+                            
+                            <div class="rule-item">
+                                <h3>3. Voting Process</h3>
+                                <p>- All registered users can vote for their favorite memes.</p>
+                                <p>- Users cannot vote for their own submissions.</p>
+                                <p>- Voting is open for the duration specified in each challenge.</p>
+                                <p>- Vote manipulation is strictly prohibited and may result in disqualification.</p>
+                            </div>
+                            
+                            <div class="rule-item">
+                                <h3>4. Prizes and Winners</h3>
+                                <p>- Winners are determined based on the number of votes received.</p>
+                                <p>- Prize details will be specified for each challenge.</p>
+                                <p>- Winners will be notified via email and announced on the platform.</p>
+                                <p>- MeMeVote reserves the right to verify the eligibility of winners.</p>
+                            </div>
+                            
+                            <div class="rule-item">
+                                <h3>5. User Conduct</h3>
+                                <p>- Be respectful to other community members.</p>
+                                <p>- Do not engage in spamming or disruptive behavior.</p>
+                                <p>- Report any violations or concerns to the MeMeVote team.</p>
+                                <p>- Repeated violations may result in account suspension or termination.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-menu">
+            <a href="index.html" class="menu-item">
+                <svg class="icon home-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+                </svg>
+                <span class="icon-label">Home</span>
+            </a>
+            <a href="upload.html" class="menu-item">
+                <svg class="icon upload-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5m-13.5-9L12 3m0 0l4.5 4.5M12 3v13.5" />
+                </svg>
+                <span class="icon-label">Upload</span>
+            </a>
+            <a href="wallet.html" class="menu-item">
+                <svg class="icon wallet-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M21 12a2.25 2.25 0 00-2.25-2.25H15a3 3 0 11-6 0H5.25A2.25 2.25 0 003 12m18 0v6a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 18v-6m18 0V9M3 12V9m18 0a2.25 2.25 0 00-2.25-2.25H5.25A2.25 2.25 0 003 9m18 0V6a2.25 2.25 0 00-2.25-2.25H5.25A2.25 2.25 0 003 6v3" />
+                </svg>
+                <span class="icon-label">Wallet</span>
+            </a>
+            <a href="about.html" class="menu-item">
+                <svg class="icon about-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M11.25 11.25l.041-.02a.75.75 0 011.063.852l-.708 2.836a.75.75 0 001.063.853l.041-.021M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9-3.75h.008v.008H12V8.25z" />
+                </svg>
+                <span class="icon-label">About</span>
+            </a>
+            <a href="profile.html" class="menu-item">
+                <div class="profile-circle">
+                    <img src="Image/profile.png" alt="Profile" class="profile-image">
+                </div>
+                <span class="icon-label">Profile</span>
+            </a>
+        </div>
+    </footer>
+    <script src="Template/Js/template.js"></script>
+    <script src="Js/about.js"></script>
+</body>
+</html>

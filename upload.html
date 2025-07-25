@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MeMeVote - Upload</title>
+    <link rel="stylesheet" href="Css/upload.css">
+    <link rel="icon" type="image/x-icon" href="Image/logo.webp">
+</head>
+<body>
+    <header class="header">
+        <div class="site-name">
+            <h1>MeMeVote</h1>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section class="upload-section">
+            <h2 class="section-title">Upload Meme</h2>
+            <p class="section-description">Upload your meme to participate in this week's challenge</p>
+            
+            <div class="upload-container" id="uploadContainer">
+                <div class="upload-area" id="uploadArea">
+                    <input type="file" id="fileInput" accept="image/*" class="file-input">
+                    <div class="upload-placeholder" id="uploadPlaceholder">
+                        <svg class="upload-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+                        </svg>
+                        <p class="upload-text" style="color: #000000;">Click to upload or drag and drop</p>
+                    </div>
+                    <div class="preview-container" id="previewContainer">
+                        <img id="imagePreview" class="image-preview" src="" alt="Preview">
+                    </div>
+                </div>
+                <p class="points-required">You need 140 points to upload</p>
+                <div class="submit-container">
+                    <button id="submitButton" class="submit-button" disabled>Submit Meme</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Terms Modal -->
+    <div class="terms-modal" id="termsModal">
+        <div class="terms-content">
+            <h3 class="terms-title">Terms and Conditions</h3>
+            <div class="terms-text" id="termsText">
+                <p>Welcome to MeMeVote! Before uploading your meme, please read and agree to the following terms and conditions:</p>
+                
+                <h4>1. Content Guidelines</h4>
+                <p>All memes must be appropriate for a general audience. Content that is offensive, discriminatory, or contains hate speech will be removed.</p>
+                
+                <h4>2. Voting and Competition</h4>
+                <p>All uploaded memes will be part of the weekly competition. Users can vote for their favorite memes.</p>
+                
+                <h4>3. Points System</h4>
+                <p>You need 140 points to upload a meme. Points can be earned by participating in the community.</p>
+                
+                <h4>4. User Conduct</h4>
+                <p>Be respectful to other users. Harassment or bullying will not be tolerated.</p>
+                
+                <h4>5. Privacy</h4>
+                <p>Your username will be displayed alongside your meme. Do not include personal information in your memes.</p>
+            </div>
+            <div class="terms-actions">
+                <div class="terms-checkbox-container">
+                    <input type="checkbox" id="termsCheckbox" disabled>
+                    <label for="termsCheckbox">I have read and agree to the terms and conditions</label>
+                </div>
+                <div class="terms-buttons">
+                    <button id="agreeButton" class="agree-button" disabled>I Agree</button>
+                    <button id="cancelButton" class="cancel-button">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-menu">
+            <a href="index.html" class="menu-item">
+                <svg class="icon home-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+                </svg>
+                <span class="icon-label">Home</span>
+            </a>
+            <a href="upload.html" class="menu-item">
+                <svg class="icon upload-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5m-13.5-9L12 3m0 0l4.5 4.5M12 3v13.5" />
+                </svg>
+                <span class="icon-label">Upload</span>
+            </a>
+            <a href="wallet.html" class="menu-item">
+                <svg class="icon wallet-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M21 12a2.25 2.25 0 00-2.25-2.25H15a3 3 0 11-6 0H5.25A2.25 2.25 0 003 12m18 0v6a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 18v-6m18 0V9M3 12V9m18 0a2.25 2.25 0 00-2.25-2.25H5.25A2.25 2.25 0 003 9m18 0V6a2.25 2.25 0 00-2.25-2.25H5.25A2.25 2.25 0 003 6v3" />
+                </svg>
+                <span class="icon-label">Wallet</span>
+            </a>
+            <a href="about.html" class="menu-item">
+                <svg class="icon about-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M11.25 11.25l.041-.02a.75.75 0 011.063.852l-.708 2.836a.75.75 0 001.063.853l.041-.021M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9-3.75h.008v.008H12V8.25z" />
+                </svg>
+                <span class="icon-label">About</span>
+            </a>
+            <a href="profile.html" class="menu-item">
+                <div class="profile-circle">
+                    <img src="Image/profile.png" alt="Profile" class="profile-image">
+                </div>
+                <span class="icon-label">Profile</span>
+            </a>
+        </div>
+    </footer>
+    <script src="Template/Js/template.js"></script>
+    <script src="Js/upload.js"></script>
+</body>
+</html>
