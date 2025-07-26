@@ -116,8 +116,9 @@
                 </div>
             </div>
         </section>
+        <?php include('./parts/footer.php');?>
     </main>
-    <?php include('./parts/footer.php');?>
+    <?php include('./parts/menu.php');?>
     <script src="./scripts/template.js"></script>
     <script src="./scripts/wallet.js"></script>
 </body>

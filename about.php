@@ -19,7 +19,7 @@
                 <div class="tab-pane active" id="about-content">
                     <h2 class="section-title">About MeMeVote</h2>
                     <div class="content-container">
-                        <div class="about-image-container">
+                        <div class="about-image-container profile-circle">
                             <img src="Image/meme5.webp" alt="About MeMeVote" class="about-image">
                         </div>
                         <div class="about-text">
@@ -128,8 +128,9 @@
                 </div>
             </div>
         </section>
+        <?php include('./parts/footer.php');?>
     </main>
-    <?php include('./parts/footer.php');?>
+    <?php include('./parts/menu.php');?>
     <script src="./scripts/template.js"></script>
     <script src="./scripts/about.js"></script>
 </body>

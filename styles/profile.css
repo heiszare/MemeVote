@@ -1,12 +1,7 @@
 @import url('./template.css');
-
-.header {
-    display: flex;
+header{
     justify-content: space-between;
-    align-items: center;
-    padding: 0 20px;
 }
-
 .auth-buttons {
     display: flex;
     gap: 10px;
@@ -498,7 +493,7 @@ input:checked + .slider:before {
     background-color: #34c759;
 }
 
-.footer-menu a {
+menu a {
     text-decoration: none;
     color: inherit;
     display: flex;
@@ -540,12 +535,12 @@ body.dark-mode {
     color: #f5f5f5;
 }
 
-body.dark-mode .header {
+body.dark-mode header {
     background-color: #1e1e1e;
     border-color: #333;
 }
 
-body.dark-mode .site-name h1 {
+body.dark-mode .site-name{
     color: #f5f5f5;
 }
 
@@ -797,7 +792,7 @@ body.dark-mode .login-button:hover {
         font-size: 0.75rem;
     }
     
-    .header {
+    header {
         padding: 0 10px;
     }
 }
@@ -1037,7 +1032,7 @@ body.dark-mode .login-button:hover {
         font-size: 13px;
     }
     
-    .site-name h1 {
+    .site-name{
         font-size: 18px;
     }
     
@@ -1181,7 +1176,7 @@ body.dark-mode .login-button:hover {
         font-size: 12px;
     }
     
-    .site-name h1 {
+    .site-name{
         font-size: 16px;
     }
     

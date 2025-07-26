@@ -42,8 +42,9 @@
                 <?php endforeach;?>
             </div>
         </section>
+        <?php include('./parts/footer.php');?>
     </main>
-    <?php include('./parts/footer.php');?>
+    <?php include('./parts/menu.php');?>
     <div id="imageModal" class="modal">
         <div class="modal-content-wrapper">
             <span class="close-modal">&times;</span>

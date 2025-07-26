@@ -32,8 +32,9 @@
                 </div>
             </div>
         </section>
+        <?php include('./parts/footer.php');?>
     </main>
-
+    <?php include('./parts/menu.php');?>
     <!-- Terms Modal -->
     <div class="terms-modal" id="termsModal">
         <div class="terms-content">
@@ -69,7 +70,6 @@
         </div>
     </div>
 
-    <?php include('./parts/footer.php');?>
     <script src="./scripts/template.js"></script>
     <script src="./scripts/upload.js"></script>
 </body>

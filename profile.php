@@ -8,9 +8,7 @@
 </head>
 <body>
     <header class="header">
-        <div class="site-name">
-            <h1>MeMeVote</h1>
-        </div>
+        <h1 class="site-name">MeMeVote</h1>
         <div class="auth-buttons">
             <a href="login.php" class="auth-button login-button">Login</a>
             <a href="sign up.php" class="auth-button signup-button">Sign Up</a>
@@ -190,8 +188,9 @@
                 </div>
             </div>
         </section>
+        <?php include('./parts/footer.php');?>
     </main>
-    <?php include('./parts/footer.php');?>
+    <?php include('./parts/menu.php');?>
     <script src="./scripts/template.js"></script>
     <script src="./scripts/profile.js"></script>
 </body>

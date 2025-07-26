@@ -1,5 +1,4 @@
-    <header class="header">
-        <div class="site-name">
-            <h1>MeMeVote</h1>
-        </div>
+    <header>
+        <img src="../assets/images/logo.webp" alt="MemeVote logo">
+        <h1 class="site-name">MeMeVote</h1>
     </header>

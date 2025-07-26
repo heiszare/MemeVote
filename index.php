@@ -31,9 +31,7 @@
 </head>
 <body>
     <div class="switch-page-button" id="switchPageButton">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"></path>
-        </svg>
+        <img src="./assets/images/pen.svg" alt="pen svg icon">
         <span>Competition</span>
     </div>
     <?php include('./parts/loader.php');?>
@@ -55,9 +53,7 @@
             
             <div class="download-button-container">
                 <button class="download-button">
-                    <svg class="download-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                        <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/>
-                    </svg>
+                    <img src="./assets/images/download.svg" class="download-icon"  alt="svg download icon">
                     Download Image
                 </button>
             </div>
@@ -77,15 +73,15 @@
                 </div>
             </div>
         </section>
+        <?php include('./parts/footer.php');?>
     </main>
-    <?php include('./parts/footer.php');?>
     <div id="imageModal" class="modal">
         <div class="modal-content-wrapper">
             <span class="close-modal">&times;</span>
             <img class="modal-content" id="modalImage">
         </div>
     </div>
-    <?php include('./parts/footer.php');?>
+    <?php include('./parts/menu.php');?>
     <script src="./scripts/template.js"></script>
     <script src="./scripts/index.js"></script>
 </body>

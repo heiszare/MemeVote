@@ -174,14 +174,6 @@
     transition: opacity 1s ease;
 }
 
-.header {
-    display: none;
-}
-
-.footer {
-    display: none;
-}
-
 .modal {
     display: none;
     position: fixed;

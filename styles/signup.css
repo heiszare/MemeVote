@@ -37,7 +37,7 @@ body {
     height: 200px;
 }
 
-.header {
+header {
     background-color: #ffffff;
     border-left: 2px solid #000;
     border-right: 2px solid #000;
@@ -60,9 +60,6 @@ body {
 
 .site-name {
     text-align: center;
-}
-
-.site-name h1 {
     font-size: 24px;
     color: #000000;
 }
@@ -217,16 +214,6 @@ body {
 
 .login-link a:hover {
     text-decoration: underline;
-}
-
-.footer {
-    background-color: #f5f5f5;
-    padding: 15px 0;
-    text-align: center;
-    font-size: 14px;
-    color: #666666;
-    margin-top: auto;
-    display: none;
 }
 
 .terms-modal {
@@ -392,7 +379,7 @@ body {
         height: 100px;
     }
     
-    .header {
+    header {
         width: 95%;
     }
     
@@ -415,7 +402,7 @@ body {
         padding: 15px;
     }
     
-    .site-name h1 {
+    .site-name{
         font-size: 20px;
     }
     
@@ -434,7 +421,7 @@ body {
         height: 80px;
     }
     
-    .header {
+    header {
         width: 100%;
         border-radius: 0 0 10px 10px;
     }

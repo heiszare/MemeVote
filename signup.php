@@ -61,8 +61,9 @@
                 <p>Already have an account? <a href="Login.html">Login</a></p>
             </div>
         </section>
+        <?php include('./parts/footer.php');?>
     </main>
-
+    <?php include('./parts/menu.php');?>
     <div class="terms-modal" id="termsModal">
         <div class="terms-content">
             <h3 class="terms-title">Terms and Conditions</h3>
@@ -95,8 +96,7 @@
                 </div>
             </div>
         </div>
-    </div>      
-    <?php include('./parts/footer.php');?>
+    </div>
     <script src="Template/Js/template.js"></script>
     <script src="Js/signup.js"></script>
 </body>
